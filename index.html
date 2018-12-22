@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<title>Sanders</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/init.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+<!-- Gradient background -->
+<style>
+body { background: linear-gradient(to right, #003973, #e5e5be);
+</style>
+
+<!-- Animations setup -->
+<style>
+.slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+.button-s {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-s span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-s span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-s:hover span {
+  padding-right: 25px;
+}
+
+.button-s:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+
+<!-- loading animation -->
+<style>
+.sk-folding-cube-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ff6347;
+z-index: 999999;
+}
+.sk-folding-cube {
+  position: absolute;
+top: 48%;
+left: 48%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}
+</style>
+
+<!-- block design -->
+<style>
+    .block-b {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 300px;
+  cursor: pointer;
+  margin: 4px;
+}
+</style>
+
+<body>
+    
+<!-- boot animation -->
+<div class="sk-folding-cube-wrapper">
+<div class="sk-folding-cube">
+  <div class="sk-cube1 sk-cube"></div>
+  <div class="sk-cube2 sk-cube"></div>
+  <div class="sk-cube4 sk-cube"></div>
+  <div class="sk-cube3 sk-cube"></div>
+</div>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-46"><br>Sanders Webpage</br></b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#recovery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Recovery</a> 
+    <a href="#roms" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Roms</a> 
+    <a href="#gapps" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Gapps</a>
+    <a href="#kernels" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Kernels</a> 
+    <a href="#extras" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Extras</a>
+   </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Sanders</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- PAGE CONTENT -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+<div id="showcase" class="w3-container" style="margin-top:80px">
+    <h1 class="w3-xxxlarge"><b>Welcome to Sanders Webpage</b></h1>
+</div>
+
+<!-- Recovery -->
+<div class="w3-container" id="recovery" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Recovery.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Custom recovery is required to flash roms,kernels,backing up stuffs and lot more</p>
+    <p>Custom recovery are device specific</p>
+    <p>Head over to download button to check the recovery available for our device</p>
+</div>
+  
+  <!--RECOVERY-->
+  <div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">TWRP</h3>
+          <p class="w3-opacity w3-center">STATUS:UNOFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Recovery/" title="RECOVERY" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <!-- Roms -->
+  <div class="w3-container" id="roms" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Roms.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Custom Roms provide better stability,performance,battery life,optimisation,customisations,betterui</p>
+    <p>Custom Roms are bloat free so they provide better performance,battery life,etc</p> 
+    <p>Roms are device specific</p>
+    <p>Head over to download button to check the roms available for our device.</p>
+  </div>
+    
+<!-- The ROMS -->
+  <div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">AOSCP(CYPHEROS)</h3>
+          <p class="w3-opacity w3-center">STATUS:UNOFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Roms/AOSCP/" title="AOSCP" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+     <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">BOOTLEGGERS</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://androidfilehost.com/?w=files&flid=254220" title="BL" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">CR-DROID</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://crdroid.net/sanders" title="CRDROID" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+   <div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">DU</h3>
+          <p class="w3-opacity w3-center">STATUS:UNOFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Roms/DirtyUnicorns%20/" title="DU-MOD" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+     </div>
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">DOT-OS</h3>
+          <p class="w3-opacity w3-center">STATUS:DROPPED</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://sourceforge.net/projects/dotos-2-x/files/sanders/" title="DOT-OS" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+     <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">FRANKEN</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Roms/Franken/" title="FRANKEN" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+<div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">GZOSP</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Roms/GZOSP/" title="GZOSP" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">LLUVIAOS</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Roms/Lluviaos/" title="LLUVIA" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+     <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">MSM-EXTENDED</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://sourceforge.net/projects/xtended/files/sanders/" title="EXTENDED" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">PIXEL EXPERIENCE</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://download.pixelexperience.org/sanders/" title="PE" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">VALIDUS</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Roms/Validus/" title="VALIDUS" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">AICP</h3>
+          <p class="w3-opacity w3-center">STATUS:UNOFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://androidfilehost.com/?w=files&flid=258309" title="AICP" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">HAVOC-OS</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Roms/GZOSP/" title="GZOSP" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">LINEAGEOS</h3>
+          <p class="w3-opacity w3-center">STATUS:UNOFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://androidfilehost.com/?w=files&flid=275454" title="LINEAGE" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">ARROW-OS</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://androidfilehost.com/?w=files&flid=275454" title="LINEAGE" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">DOWNLOAD</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+           <h3 class="w3-center">STAY TUNED FOR MORE ROMS</h3>
+           <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Roms/" title="ROMS" target="_blank" class="w3-hover-opacity w3-center"><span class="glyphicon glyphicon-cloud-download">UNLISTED</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Gapps-->
+  <div class="w3-container" id="gapps" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Gapps.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Some custom roms comes without gapps so we need to flash it externally after flashing rom</p>
+    <p>Gapps are common for all same architecture devices</p>
+    <p>Head over to download button </p>
+     </div>
+    
+    <!-- GAPPS-->
+<div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+	  <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">OPENGAPPS</h3>
+          <p class="w3-opacity w3-center">STATUS:OFFICIAL</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://opengapps.org" title="OPENGAPPS" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">OPENGAPPS</span></a></button>
+        </div>
+	  </div>
+    </div>
+  </div>
+    <!-- Kernels -->
+  <div class="w3-container" id="kernels" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Kernels.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>A kernel is the foundational layer of an operating system (OS). It functions at a basic level, communicating with hardware and managing resources, such as RAM and the CPU. Since a kernel handles many fundamental processes, it must be loaded at the beginning of the boot sequence when a device starts up.</p>
+    <p>Kernels are device specific</p>
+    <p>Head over to download button to check the kernels available for our device</p>
+  </div>
+  
+<!-- The KERNELS -->
+  <div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">STAY TUNED FOR MORE KERNELS</h3>
+          <button class="button-s" style="vertical-align:middle"><a href="http://www.sanders.co.in/Kernels/" title="KERNELS" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">UNLISTED</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+   <!-- Extras -->
+  <div class="w3-container" id="extras" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Extras.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Some addons for our device</p>
+  </div>
+  
+  <!--EXTRAS-->
+  <div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">GOOGLE CAMERA</h3>
+          <p class="w3-opacity w3-center">STATUS:NOT REQUIRED</p>
+          <button class="button-s" style="vertical-align:middle"><a href="https://www.celsoazevedo.com/files/android/google-camera/dev-bsg/" title="GCAM" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-cloud-download">GCAM</span></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Donations-->
+  <div class="w3-container" id="donations" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Donations.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>If you guys like our work please donate us.</p>
+    <p>Donations are not compulsory but it help us continue our work</p>
+  </div>
+    
+    <!-- DONATE-->
+  <div class="w3-row-padding">
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">CHIRAYU AGRAWAL</h3>
+          <button class="button-s" style="vertical-align:middle"><a href="https://www.paypal.me/chirayu19091997" title="PAYPAL" target="_blank" class="w3-hover-opacity"><span class="glyphicon glyphicon-piggy-bank">PAYPAL</span></a></button>
+        </div>
+      </div>
+    </div>
+    <div class="block-b m4 w3-margin-bottom slideanim">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3 class="w3-center">MORE DONATION METHODS COMING SOON</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="container-fluid text-center">
+  <a href="#" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  <p>BACK TO TOP</p>
+</footer>
+
+<!-- End page content -->
+</div>
+
+<!-- Designed by Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Designed by Chirayu Agrawal</p></div>
+
+<!-- Script to open and close sidebar and modal image gallery-->
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+<!-- Script for animation -->
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+<!--cube animation java script-->
+<script>
+$(document).ready(function() {
+//Preloader
+$(window).on("load", function() {
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.sk-folding-cube-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+});
+</script>
+
+</body>
+</html>
