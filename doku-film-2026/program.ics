@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//DOKU FILM community 2026//SK
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:DOKU & FILM 19.-25.10.2026
+X-WR-CALNAME:DOKU & FILM Bratislava 19.-25.10.2026
 X-WR-TIMEZONE:Europe/Bratislava
 X-WR-CALDESC:Festivalovy prehlad - Ackko, Jeden svet a Den slovenskeho dokumentarneho filmu
 BEGIN:VEVENT
@@ -320,19 +320,6 @@ DESCRIPTION:Áčko 2026 • 30. ročník • 20.–24. október 2026 Vstu
  armonogram/\nProgram: https://festivalacko.sk/timetable/event/vitazne-pa
  smo-acko-2025/
 URL:https://festivalacko.sk/timetable/event/vitazne-pasmo-acko-2025/
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:pina20@doku-film-2026
-DTSTAMP:20261018T120000Z
-DTSTART:20261020T160000Z
-DTEND:20261020T174300Z
-SUMMARY:Kino NAOKO | Pina (Wim Wenders)
-LOCATION:Kino Hviezda\, Paulínska 1\, Trnava
-DESCRIPTION:Dokumentárny film Wima Wendersa o choreografke Pine Bausch. 
- Be2Can 2026. Vstupné podľa kina.\nProgram: https://www.mojekino.sk/kli
- ent-100/kino-29/stranka-17496/film-840607
-URL:https://www.mojekino.sk/klient-100/kino-29/stranka-17496/film-840607
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -1707,6 +1694,50 @@ DESCRIPTION:Festival Jeden svet 2026. Programová ponuka\, nie potvrdená
  .\nProgram: https://jedensvet.cinepass.sk/sk/tickets/?day=all&onlyAvaila
  ble=0
 URL:https://jedensvet.cinepass.sk/sk/tickets/?day=all&onlyAvailable=0
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mystreet20261025@doku-film-2026
+DTSTAMP:20261018T120000Z
+DTSTART:20261025T183000Z
+DTEND:20261025T201000Z
+SUMMARY:Jeden svet | My Street Films SK – premiéra 8 krátkych dokumentov
+LOCATION:Kino Lumière\, Špitálska 4\, Bratislava
+DESCRIPTION:Premiéra 8 dokumentov: Nevidím tmu (Kristína Horinková)\, V podzemí (Diana Čaklošová)\, Prepáčte\, že ruším (Dorián Vrbovský)\, Posolstvo (Veronika Machová)\, Vstup na vlastné riziko (Veronika Bajnoková)\, Ema má mamu\, Medo má otca (Ema Ištvánfyová)\, A pri slovenskej hymne naďalej pyšne stáť (Ivana Kováčiková)\, Kde je môj domov? (Kateryna Maliarova). Koniec orientačný.
+URL:https://mobil.citylife.sk/film/my-street-films-sk
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pinaBA20261019@doku-film-2026
+DTSTAMP:20261018T120000Z
+DTSTART:20261019T161000Z
+DTEND:20261019T175000Z
+SUMMARY:Pina – Wim Wenders\, dokumentárna projekcia
+LOCATION:Kino Lumière\, Špitálska 4\, Bratislava
+DESCRIPTION:Dokumentárny film o choreografke Pine Bausch. Be2Can\, 100 min.
+URL:https://cl3.admin.citylife.sk/film/pina
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:holubyBA20261019@doku-film-2026
+DTSTAMP:20261018T120000Z
+DTSTART:20261019T182000Z
+DTEND:20261019T201000Z
+SUMMARY:Keby sa holuby premenili na zlato – dokument
+LOCATION:Kino Lumière\, Špitálska 4\, Bratislava
+DESCRIPTION:Autorský dokument Pepy Lubojacki (2026\, 110 min) o rodine a závislosti.
+URL:https://cl3.admin.citylife.sk/film/keby-sa-holuby-premenili-na-zlato
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:holubyBA20261021@doku-film-2026
+DTSTAMP:20261018T120000Z
+DTSTART:20261021T183000Z
+DTEND:20261021T202000Z
+SUMMARY:Keby sa holuby premenili na zlato – dokument
+LOCATION:Kino Lumière\, Špitálska 4\, Bratislava
+DESCRIPTION:Opakovaná projekcia dokumentu Pepy Lubojacki (2026\, 110 min).
+URL:https://cl3.admin.citylife.sk/film/keby-sa-holuby-premenili-na-zlato
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR
